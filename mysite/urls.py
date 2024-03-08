@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from color_app import views
 
 urlpatterns = [
     path('', include('color_app.urls')),
     path('admin/', admin.site.urls),
-    
+    path('colors/', views.ColorListView.as_view(), name="color_list"),
+    path('colors/new', views.NewColorView.as_view(), name="new_color"),
 ]
