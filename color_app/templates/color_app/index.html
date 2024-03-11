@@ -7,8 +7,11 @@
       {% include "color_app/swatch.html" %}
       <p>
         <a href="{% url 'color_app:random_color' %}">
-	  How about a random color?
+	  How about a random color?<br>
 	</a> 
+        <a href="{%url 'color_app:color_list' %}">
+          Make a new color or view existing created colors!
+        </a>
       </p>
     </div>
   </div>
